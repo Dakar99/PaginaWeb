@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+</head>
+<body>
+
+    <h2>Registro de Atleta/Profesional de la Salud</h2>
+    <form id="registrationForm">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+        <label for="correo">Correo Electrónico:</label><br>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="descripcion">Cuéntanos más de ti:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="button" onclick="submitForm()">Enviar</button>
+    </form>
+
+    <script>
+        async function submitForm() {
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                apellido: document.getElementById('apellido').value,
+                fecha_nacimiento: document.getElementById('fecha_nacimiento').value,
+                correo: document.getElementById('correo').value,
+                descripcion: document.getElementById('descripcion').value
+            };
+
+            try {
+                const response = await fetch('/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert('Formulario enviado correctamente.');
+                } else {
+                    alert('Error al enviar el formulario.');
+                }
+            } catch (error) {
+                alert('Error en la conexión.');
+            }
+        }
+    </script>
+
+</body>
+</html>
