@@ -18,12 +18,13 @@ function anchoPagina(){
         caja_trasera_register.style.opacity = "1";
         caja_trasera_login.style.display = "none";
         formulario_login.style.display = "block";
-        formulario_register.style.display = "none";
         contenedor_login_register.style.left = "0px";
+        formulario_register.style.display = "none";
+       
     }
 }
 
-
+anchoPagina();
 
 
 function iniciarSesion() {
@@ -43,6 +44,8 @@ function iniciarSesion() {
     }
     
 }
+
+anchoPagina();
 
 
 function register() {
