@@ -43,12 +43,16 @@
                 <!--Registro-->
                 <form action="" class="formulario__register">
                     <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre Completo">
+                    <input type="text" placeholder="Nombre (s)">
+                    <input type="text" placeholder="Apellidos">
                     <input type="text" placeholder="Correo Electronico">
-                    <input type="text" placeholder="Fecha de nacimiento">
-                    <input type="text" placeholder="Usuario">
-                    <input type="password" placeholder="Contraseña">
-                    <button>Registrarse</button>
+                    <!--Contenedor para la etiqueta y campo fecha-->
+                    <div class="fecha-nacimiento-container">
+                        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+                    <textarea id="descripcion" placeholder="Cuéntanos un poco más de ti"></textarea>
+                    <button>Enviar</button>
                 </form>
             </div>
         </div>
