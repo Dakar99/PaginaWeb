@@ -160,6 +160,25 @@
             <!-- Añadir más tarjetas de acuerdo a los profesionales y sus categorías -->
         </div>
 
+        <!-- Botón para abrir la ventana emergente -->
+        <button id="openPopup" class="open-popup-btn">¡Regístrate
+            Ahora!</button>
+
+        <!-- Ventana Emergente -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopup" class="close-btn">&times;</span>
+                <!-- Icono y texto centrado -->
+                <div class="popup-header">
+                    <i class="fas fa-users fa-3x"></i> <!-- Icono de usuario -->
+                    <h2>¡Únete a nosotros!</h2>
+                </div>
+                <p>Regístrate y accede a contenido exclusivo. ¡Es rápido y
+                    fácil!</p>
+                <button class="popup-btn">¡Quiero registrarme!</button>
+            </div>
+        </div>
+
         <!-- Footer Start -->
         <div
             class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
@@ -240,7 +259,6 @@
         </div>
         <!-- Footer End -->
 
-
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script
@@ -251,6 +269,8 @@
         <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
         <!-- Template Javascript -->
+        <script src="../js/main.js"></script>
+        <script src="../js/script.js"></script>
         <script>
         function filtrar(categoria) {
          // Remover la clase "active" de todos los botones de filtro
@@ -272,7 +292,7 @@ tarjetas.forEach(tarjeta => {
             } });
     }
         </script>
-        <script src="../js/main.js"></script>
+
     </body>
 
 </html>

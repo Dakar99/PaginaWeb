@@ -74,6 +74,91 @@
     font-weight: normal;
     border-radius: 0px;
 }
+/* Estilo del botón para abrir la ventana emergente */
+.open-popup-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #06BBCC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2; /* Asegura que esté por encima de la ventana emergente */
+}
+
+/* Estilo de la ventana emergente */
+.popup {
+    position: fixed;
+    top: 50%; /* Centra la ventana verticalmente */
+    left: 50%; /* Centra la ventana horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la ventana para que esté centrada */
+    width: 350px;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    display: none; /* Inicialmente oculta */
+    z-index: 1;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para mayor efecto */
+    padding: 20px;
+    text-align: center;
+    color: #333; /* Color de texto oscuro para mejor contraste con el fondo claro */
+    font-family: Arial, sans-serif;
+}
+
+/* Contenido de la ventana emergente */
+.popup-content {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Cabecera de la ventana emergente: Icono y Título */
+.popup-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+   
+}
+
+.popup-header i {
+    color: #06BBCC; /* Color del icono */
+}
+
+.popup-header h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón de cierre de la ventana emergente */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Color oscuro para el botón de cierre */
+    cursor: pointer;
+}
+
+/* Botón dentro de la ventana emergente */
+.popup-btn {
+    padding: 10px 20px;
+    background-color: #06BBCC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-btn:hover {
+    background-color: #06BBCC;
+}
 
 
 /*** Navbar ***/
@@ -431,7 +516,7 @@
         padding: 30px 0;
         background-color: #f9f9f9;
     }
-    
+
     /* Título de los patrocinadores */
     .patrocinadores-container h2 {
         font-size: 2rem;
@@ -439,32 +524,34 @@
         color: #333;
         margin-bottom: 20px;
     }
-    
+
     /* Contenedor de los logos de los patrocinadores */
     .patrocinadores {
         display: flex;
         justify-content: center;
-        gap: 30px; /* Espacio entre los patrocinadores */
+        gap: 30px;
+        /* Espacio entre los patrocinadores */
     }
-    
+
     /* Estilo de cada patrocinador */
     .patrocinador {
         text-align: center;
     }
-    
+
     /* Estilo para las imágenes de los logos */
     .patrocinador img {
         width: 150px;
         height: auto;
         margin-bottom: 10px;
     }
-    
+
     /* Estilo para los nombres de los patrocinadores */
     .patrocinador p {
         font-size: 1rem;
         color: #555;
         margin-top: 10px;
     }
+
     /*** Footer ***/
     .footer .btn.btn-social {
         margin-right: 5px;
