@@ -38,9 +38,9 @@
                     <td>********</td>
                     <td>12/12/2024</td>
                     <td>Fiel y chambeador</td>
-                    <td>Administrador</td>
-                    <td><button class="edit-button" onclick="openModal('Kevin', 'Gatica', '12/12/2024', 'Fiel y chambeador', 'Administrador')">Editar</button></td>
-                    <td><button class="delete-button">Eliminar</button></td>
+                    <td>futbol</td>
+                    <td><button class="edit-button" onclick="openModal('Kevin', 'Gatica', '12/12/2024', 'Fiel y chambeador', 'futbol')">Editar</button></td>
+                    <td><button onclick="confirmDelete(this)" class="delete-button">Eliminar</button></td>
                 </tr>
                 <tr>
                     <td>Dakar</td>
@@ -83,8 +83,8 @@
                  <label for="register-description">Descripción:</label>
                  <input type="text" id="register-description" required>
  
-                 <label for="register-category">Categoría:</label>
-                 <input type="text" id="register-category" required>
+                 <label for="register-type">Tipo:</label>
+                 <input type="text" id="register-type" required>
  
                  <button type="button" class="save-button" onclick="registerUser()">Registrar</button>
              </form>
@@ -107,15 +107,23 @@
                 <label for="edit-description">Descripción:</label>
                 <input type="text" id="edit-description" required>
 
-                <label for="edit-category">Categoría:</label>
-                <input type="text" id="edit-category" required>
+                <label for="edit-type">Tipo:</label>
+                <input type="text" id="edit-type" required>
 
                 <button type="button" class="save-button1" onclick="saveChanges()">Guardar Cambios</button>
 
             </form>
         </div>
     </div>
-    
+    <!-- Modal de confirmación de eliminacion -->
+<div id="deleteModal" class="modal2">
+    <div class="modal-content2">
+        <span class="close2" onclick="closeModal()">&times;</span>
+        <p>¿Estás seguro de que quieres eliminar este usuario?</p>
+        <button onclick="deleteUser()" class="confirm-delete2">Sí, eliminar</button>
+        <button onclick="closeModal()" class="cancel-delete2">Cancelar</button>
+    </div>
+</div>
     
 
 
