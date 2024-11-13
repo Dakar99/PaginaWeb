@@ -18,7 +18,7 @@ function registerUser() {
     const password = document.getElementById("register-password").value;
     const birthdate = document.getElementById("register-birthdate").value;
     const description = document.getElementById("register-description").value;
-    const category = document.getElementById("register-category").value;
+    const type = document.getElementById("register-type").value;
 
     // Crear el objeto de datos para enviar
     const userData = {
@@ -28,7 +28,7 @@ function registerUser() {
         password: password,
         birthdate: birthdate,
         description: description,
-        category: category
+        type: type
     };
 
     // Enviar los datos a la API (reemplaza 'URL_DE_TU_API' con la URL de tu backend)
@@ -55,11 +55,11 @@ function registerUser() {
 
 //botom de editar
 // Función para abrir el modal de edición y rellenar los campos con datos del usuario
-function openModal(name, surname, birthdate, description, category) {
+function openModal(name, surname, description, type) {
     document.getElementById("edit-name").value = name;
     document.getElementById("edit-surname").value = surname;
     document.getElementById("edit-description").value = description;
-    document.getElementById("edit-category").value = category;
+    document.getElementById("edit-type").value = type;
 
     document.getElementById("editModal").style.display = "flex";
 }
@@ -76,7 +76,7 @@ function saveChanges() {
     const name = document.getElementById("edit-name").value;
     const surname = document.getElementById("edit-surname").value;
     const description = document.getElementById("edit-description").value;
-    const category = document.getElementById("edit-category").value;
+    const type = document.getElementById("edit-type").value;
 
     // Lógica para guardar los cambios en la base de datos o backend (aquí puedes implementar la llamada a tu API)
     const updatedUser = {
@@ -92,4 +92,29 @@ function saveChanges() {
 
     // Cerrar el modal
     closeEditModal();
+}
+
+//botom eliminar
+let rowToDelete = null;
+
+function confirmDelete(button) {
+    // Guarda la fila del botón que se va a eliminar
+    rowToDelete = button.parentNode.parentNode;
+
+    // Muestra el modal
+    document.getElementById("deleteModal").style.display = "block";
+}
+
+function closeModal() {
+    // Oculta el modal
+    document.getElementById("deleteModal").style.display = "none";
+}
+
+function deleteUser() {
+    if (rowToDelete) {
+        // Elimina la fila del usuario
+        rowToDelete.parentNode.removeChild(rowToDelete);
+        console.log("Usuario eliminado.");
+        closeModal(); // Cierra el modal después de eliminar
+    }
 }
