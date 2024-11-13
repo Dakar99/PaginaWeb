@@ -425,96 +425,46 @@
         color: var(--light) !important;
     }
 
-
-    /*** Categories & Courses ***/
-    .category img,
-    .course-item img {
-        transition: .5s;
+    /* Estilos específicos para la sección de patrocinadores */
+    .patrocinadores-container {
+        text-align: center;
+        padding: 30px 0;
+        background-color: #f9f9f9;
     }
-
-    .category a:hover img,
-    .course-item:hover img {
-        transform: scale(1.1);
+    
+    /* Título de los patrocinadores */
+    .patrocinadores-container h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
     }
-
-
-
-
-    /*** Testimonial ***/
-    .testimonial-carousel::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-        z-index: 1;
-    }
-
-    .testimonial-carousel::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 0;
-        background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-        z-index: 1;
-    }
-
-    @media (min-width: 768px) {
-
-        .testimonial-carousel::before,
-        .testimonial-carousel::after {
-            width: 200px;
-        }
-    }
-
-    @media (min-width: 992px) {
-
-        .testimonial-carousel::before,
-        .testimonial-carousel::after {
-            width: 300px;
-        }
-    }
-
-    .testimonial-carousel .owl-item .testimonial-text,
-    .testimonial-carousel .owl-item.center .testimonial-text * {
-        transition: .5s;
-    }
-
-    .testimonial-carousel .owl-item.center .testimonial-text {
-        background: var(--primary) !important;
-    }
-
-    .testimonial-carousel .owl-item.center .testimonial-text * {
-        color: #FFFFFF !important;
-    }
-
-    .testimonial-carousel .owl-dots {
-        margin-top: 24px;
+    
+    /* Contenedor de los logos de los patrocinadores */
+    .patrocinadores {
         display: flex;
-        align-items: flex-end;
         justify-content: center;
+        gap: 30px; /* Espacio entre los patrocinadores */
     }
-
-    .testimonial-carousel .owl-dot {
-        position: relative;
-        display: inline-block;
-        margin: 0 5px;
-        width: 15px;
-        height: 15px;
-        border: 1px solid #CCCCCC;
-        transition: .5s;
+    
+    /* Estilo de cada patrocinador */
+    .patrocinador {
+        text-align: center;
     }
-
-    .testimonial-carousel .owl-dot.active {
-        background: var(--primary);
-        border-color: var(--primary);
+    
+    /* Estilo para las imágenes de los logos */
+    .patrocinador img {
+        width: 150px;
+        height: auto;
+        margin-bottom: 10px;
     }
-
-
+    
+    /* Estilo para los nombres de los patrocinadores */
+    .patrocinador p {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 10px;
+    }
     /*** Footer ***/
     .footer .btn.btn-social {
         margin-right: 5px;
