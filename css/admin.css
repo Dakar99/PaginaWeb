@@ -1,327 +1,121 @@
+/* Estilos Generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.header {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    background-color: #06BBCC; /* Ajusta el color de fondo */
 }
 
-.image {
-    height: 40px; /* Ajusta el tamaño de la imagen */
-}
-
-.logout-button {
-    background-color: #0f0f0e; /* Ajusta el color del botón */
+/* Barra Lateral (Sidebar) */
+.sidebar {
+    width: 250px;
+    background-color: #333;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
 }
 
-.admin-table-container {
-    width: 80%;
-    margin: 40px auto;
+.sidebar h2 {
+    text-align: center;
+    color: #00f3ff;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #00bcd4;
+    color: white;
+}
+
+/* Contenido Principal */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+.main-content h2 {
+    color: #333;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.admin-table {
+/* Tabla de Usuarios */
+table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-.admin-table th, .admin-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.admin-table th {
-    background-color: #0f0f0e;
+table th {
+    background-color: #00f3ff;
     color: white;
     font-weight: bold;
 }
 
-.admin-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.edit-button, .delete-button {
-    padding: 8px 16px;
-    border: none;
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    text-decoration: none;
     color: white;
-    cursor: pointer;
     border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.edit-button {
-    background-color: green;
+.btn-edit {
+    background-color: #4CAF50;
 }
 
-.delete-button {
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
     background-color: #f44336;
 }
 
-/*Boton de registrar*/
-.register-button {
-    margin-left: 200px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #06BBCC;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-/*MODAL DE REGISTRO DE USUARIOS*/
-/* Estilo para el fondo del modal */
-.modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-    align-items: center;
-    justify-content: center;
-}
-
-/* Contenedor del contenido del modal */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slide-down 0.3s ease-out;
-}
-
-/* Animación para mostrar el modal */
-@keyframes slide-down {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Botón de cerrar */
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    color: #000;
-}
-
-/* Labels y campos de entrada */
-.modal-content label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-    color: #555;
-}
-
-.modal-content input[type="text"],
-.modal-content input[type="email"],
-.modal-content input[type="password"],
-.modal-content input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Botón de registro */
-.save-button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #06BBCC;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/*boton editar*/
-/* Estilo para el fondo del modal */
-.modal1 {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-    align-items: center;
-    justify-content: center;
-}
-
-/* Contenedor del contenido del modal */
-.modal-content1 {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slide-down 0.3s ease-out;
-}
-
-/* Animación para mostrar el modal */
-@keyframes slide-down {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Botón de cerrar */
-.close-button1 {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    color: #000;
-}
-
-/* Labels y campos de entrada */
-.modal-content1 label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-    color: #555;
-}
-
-.modal-content1 input[type="text"],
-.modal-content1 input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Botón de guardar cambios */
-.save-button1 {
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #06BBCC;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/*BOTON ELIMINAR*/
-/* Estilos del modal */
-.modal2 {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 30px 20px;
-    border-radius: 8px;
-    width: 320px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar el modal */
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-}
-
-.close2 {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 18px;
-    color: #aaa;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.confirm-delete2 {
-    background-color: #e74c3c; /* Rojo */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s;
-}
-
-.cancel-delete2 {
-    background-color: #95a5a6; /* Gris */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.modal-content2 p {
-    margin-bottom: 20px;
-    font-weight: bold;
+.btn-delete:hover {
+    background-color: #d32f2f;
 }

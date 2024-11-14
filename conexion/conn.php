@@ -9,13 +9,13 @@ $base_de_datos = "systemweb";  // Nombre de la base de datos que quieres probar
 $conn = new mysqli($servidor, $usuario, $contraseña, $base_de_datos);
 
 // Verificar la conexión
-if ($conn->connect_error) {
-    // Si la conexión falla
-    die("Conexión fallida: " . $conn->connect_error);
-} else {
-    // Si la conexión es exitosa
-    echo "Conexión exitosa con la base de datos: " . $base_de_datos;
-}
+// if ($conn->connect_error) {
+//     // Si la conexión falla
+//     die("Conexión fallida: " . $conn->connect_error);
+// } else {
+//     // Si la conexión es exitosa
+//     echo "Conexión exitosa con la base de datos: " . $base_de_datos;
+// }
 
 // Cerrar la conexión
 $conn->close();
