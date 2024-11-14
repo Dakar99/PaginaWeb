@@ -48,7 +48,7 @@ $conn->close();
 
     <div class="form-container">
         <h2>Agregar Nuevo Usuario</h2>
-        <form action="agregar_usuario.php" method="POST">
+        <form action="../admin/admin.php" method="POST">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required><br>
 
