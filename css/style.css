@@ -366,6 +366,9 @@
     }
 
 
+ 
+
+
     /*** Section Title ***/
     .section-title {
         position: relative;
@@ -514,6 +517,16 @@
         border-color: var(--primary);
     }
 
+    /* Estilos para la división */
+    .mi-division {
+        width: 100%;
+        height: 400px;
+        background-color: #f0f0f0;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
 
     /*** Footer ***/
     .footer .btn.btn-social {
@@ -580,4 +593,154 @@
         padding-right: 0;
         border-right: none;
     }
+
+
+
+
+    /* estilos de perfil*
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+    }*/
+
+    /* Contenedor del perfil */
+    .perfil-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+    }
+
+    /* Imagen de perfil */
+    .perfil-imagen-container {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+        border-radius: 50%;
+        transition: transform 0.3s;
+    }
+    .perfil-imagen-container img {
+        width: 120%; /* Imagen 20% más grande */
+        height: auto;
+    }
+
+    /* Botón de cámara sobre la imagen */
+    .modificar-foto {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: #06BBCC;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* Sección de información de perfil */
+    .perfil-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .perfil-info h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+    }
+
+    /* Botón de modificar información */
+    .modificar-informacion {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: #06BBCC;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: auto;
+        
+    }
+
+    .modificar-informacion i {
+        font-size: 18px;
+    }
+
+
+    .rounded-circle {
+        width: 150px;
+        height: 150px; 
+        object-fit: cover; 
+        margin-bottom: 20px;
+
+    }
+
+    .owl-carousel-item {
+        position: relative;
+    }
+    
+    .btn-subir-foto {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: #06BBCC;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: opacity 0.3s, transform 0.3s;
+    }
+    
+    .btn-subir-foto:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    .btn-social {
+        background-color: #06BBCC; /* Fondo azul */
+        color: white; /* Iconos blancos */
+        border: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* Forma circular */
+        transition: background-color 0.3s, transform 0.3s; /* Efecto suave */
+        margin-right: 10px; /* Separación entre botones */
+    }
+    
+    .btn-social:hover {
+        background-color: #06BBCC; /* Azul más oscuro en hover */
+        transform: scale(1.1); /* Ligero aumento en hover */
+    }
+    
+    .btn-social i {
+        font-size: 18px; /* Tamaño del icono */
+    }
+
+
+
 }

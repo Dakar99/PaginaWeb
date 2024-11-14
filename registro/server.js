@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
     service: 'gmail',  // Puedes cambiar esto a tu proveedor de correo
     auth: {
-        user: 'tuemail@gmail.com',  // Reemplaza con el correo del administrador
-        pass: 'tucontraseña'        // Reemplaza con la contraseña del correo
+        user: 'usana@gmail.com',  // Reemplaza con el correo del administrador
+        pass: '123456789'        // Reemplaza con la contraseña del correo
     }
 });
 
