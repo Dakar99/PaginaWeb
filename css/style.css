@@ -837,6 +837,47 @@
     background-color: #06BBCC;
 }
 
+/* Estilo general para el contenedor de patrocinadores */
+.patrocinadores-container {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f9f9f9;
+}
+
+/* Título de los patrocinadores */
+.patrocinadores-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los logos de los patrocinadores */
+.patrocinadores {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre los patrocinadores */
+}
+
+/* Estilo de cada patrocinador */
+.patrocinador {
+    text-align: center;
+}
+
+/* Estilo para las imágenes de los logos */
+.patrocinador img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los nombres de los patrocinadores */
+.patrocinador p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
 
 
 
