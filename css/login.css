@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #33eaff;
+    background-image: url(../img/2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -216,3 +216,45 @@ main {
 .home__buttom {
     text-decoration: underline;
 }
+
+/* Contenedor de la fecha de nacimiento */
+.fecha-nacimiento-container {
+    margin-top: 10px; /* Ajusta el margen superior para mover ambos elementos hacia abajo */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para la etiqueta */
+.fecha-nacimiento-container label {
+    font-size: 0.9em;
+    color: #333;
+    margin: 0;
+    padding: 0; /* Espacio entre la etiqueta y el campo de fecha */
+}
+
+/* Estilo para el campo de entrada de fecha */
+.fecha-nacimiento-container input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        background: #f2f2f2;
+        border: none;
+        font-size: 16px;
+        outline: none;
+        margin: 0; /* Sin margen superior */
+    }
+
+    textarea {
+        margin-top: 10px;
+        width: 100%; /* Ocupa todo el ancho del formulario */
+        height: 100px; /* Ajusta la altura según sea necesario */
+        padding: 10px;
+        font-size: 16px;
+        background: #f2f2f2;
+        border: none;
+        border-radius: 5px;
+        resize: vertical; /* Permite cambiar la altura del campo manualmente */
+        outline: none;
+    }
+    
+
+
